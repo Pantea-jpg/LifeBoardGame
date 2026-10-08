@@ -1,0 +1,243 @@
+.game-container {
+  min-height: 100vh;
+  background: #0f172a;
+  color: #f8fafc;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 40px 20px;
+  box-sizing: border-box;
+
+  font-family: Arial, sans-serif;
+}
+
+.game-card {
+  width: 100%;
+  max-width: 900px;
+
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 20px;
+
+  padding: 30px;
+  box-sizing: border-box;
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 25px;
+}
+
+.game-header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.game-header p {
+  margin: 8px 0 0;
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.status {
+  padding: 8px 14px;
+  border-radius: 999px;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.status.paused {
+  background: #14532d;
+  color: #86efac;
+}
+
+.status.running {
+  background: #7f1d1d;
+  color: #fca5a5;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  align-items: end;
+  margin-bottom: 25px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.input-group label {
+  font-size: 12px;
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+.input-group input {
+  width: 90px;
+
+  padding: 10px 12px;
+
+  border-radius: 8px;
+  border: 1px solid #475569;
+
+  background: #0f172a;
+  color: #f8fafc;
+
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.input-group input:focus {
+  border-color: #38bdf8;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+
+  padding: 11px 18px;
+
+  font-weight: 600;
+  font-size: 14px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.15s ease,
+    opacity 0.15s ease,
+    background 0.15s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.set-button {
+  background: #475569;
+  color: #f8fafc;
+}
+
+.set-button:hover {
+  background: #64748b;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.step-button {
+  background: #334155;
+  color: #f8fafc;
+}
+
+.step-button:hover {
+  background: #475569;
+}
+
+.step-button:disabled {
+  background: #1e293b;
+  color: #64748b;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.play-button {
+  min-width: 90px;
+  color: white;
+}
+
+.play-button.play {
+  background: #22c55e;
+}
+
+.play-button.play:hover {
+  background: #16a34a;
+}
+
+.play-button.stop {
+  background: #ef4444;
+}
+
+.play-button.stop:hover {
+  background: #dc2626;
+}
+
+.grid-container {
+  background: #020617;
+
+  border: 1px solid #334155;
+  border-radius: 12px;
+
+  padding: 15px;
+
+  overflow: auto;
+  max-height: 70vh;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+
+  width: fit-content;
+
+  margin: 0 auto;
+
+  gap: 1px;
+}
+
+.grid-row {
+  display: flex;
+  flex-direction: row;
+  gap: 1px;
+}
+
+.cell {
+  width: 10px;
+  height: 10px;
+
+  border-radius: 2px;
+
+  cursor: pointer;
+
+  transition: background-color 0.1s ease;
+}
+
+.cell.alive {
+  background: #38bdf8;
+}
+
+.cell.dead {
+  background: #172033;
+}
+
+.cell.dead:hover {
+  background: #334155;
+}
+
+.game-footer {
+  margin-top: 15px;
+
+  display: flex;
+  justify-content: space-between;
+
+  color: #64748b;
+  font-size: 12px;
+}
